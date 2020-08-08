@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\side\\bot\\hackathon\\hackathon.csproj": {}
+    "c:\\side\\bot\\spaceracebot\\spaceracebot\\hackathon.csproj": {}
   },
   "projects": {
-    "c:\\side\\bot\\hackathon\\hackathon.csproj": {
+    "c:\\side\\bot\\spaceracebot\\spaceracebot\\hackathon.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\side\\bot\\hackathon\\hackathon.csproj",
+        "projectUniqueName": "c:\\side\\bot\\spaceracebot\\spaceracebot\\hackathon.csproj",
         "projectName": "hackathon",
-        "projectPath": "c:\\side\\bot\\hackathon\\hackathon.csproj",
+        "projectPath": "c:\\side\\bot\\spaceracebot\\spaceracebot\\hackathon.csproj",
         "packagesPath": "C:\\Users\\ASUS\\.nuget\\packages\\",
-        "outputPath": "c:\\side\\bot\\hackathon\\obj\\",
+        "outputPath": "c:\\side\\bot\\spaceracebot\\spaceracebot\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -41,13 +41,25 @@
           "dependencies": {
             "Microsoft.NET.Sdk.Functions": {
               "target": "Package",
-              "version": "[1.0.31, )"
+              "version": "[1.0.24, )"
             },
             "Microsoft.NETCore.App": {
               "suppressParent": "All",
               "target": "Package",
               "version": "[2.1.0, )",
               "autoReferenced": true
+            },
+            "MoreLinq": {
+              "target": "Package",
+              "version": "[3.1.1, )"
+            },
+            "SixLabors.ImageSharp.Drawing": {
+              "target": "Package",
+              "version": "[1.0.0-beta0006, )"
+            },
+            "SixLabors.Shapes.Text": {
+              "target": "Package",
+              "version": "[1.0.0-beta0008, )"
             }
           },
           "imports": [

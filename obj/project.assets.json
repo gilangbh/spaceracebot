@@ -284,10 +284,10 @@
           "lib/netstandard2.0/Microsoft.AspNetCore.WebUtilities.dll": {}
         }
       },
-      "Microsoft.Azure.WebJobs/3.0.14": {
+      "Microsoft.Azure.WebJobs/3.0.0": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Azure.WebJobs.Core": "3.0.14",
+          "Microsoft.Azure.WebJobs.Core": "3.0.0",
           "Microsoft.Extensions.Configuration": "2.1.0",
           "Microsoft.Extensions.Configuration.Abstractions": "2.1.0",
           "Microsoft.Extensions.Configuration.EnvironmentVariables": "2.1.0",
@@ -306,7 +306,7 @@
           "lib/netstandard2.0/Microsoft.Azure.WebJobs.Host.dll": {}
         }
       },
-      "Microsoft.Azure.WebJobs.Core/3.0.14": {
+      "Microsoft.Azure.WebJobs.Core/3.0.0": {
         "type": "package",
         "dependencies": {
           "System.ComponentModel.Annotations": "4.4.0",
@@ -319,11 +319,11 @@
           "lib/netstandard2.0/Microsoft.Azure.WebJobs.dll": {}
         }
       },
-      "Microsoft.Azure.WebJobs.Extensions/3.0.5": {
+      "Microsoft.Azure.WebJobs.Extensions/3.0.0": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Azure.WebJobs": "3.0.14",
-          "Microsoft.Azure.WebJobs.Host.Storage": "3.0.11",
+          "Microsoft.Azure.WebJobs": "3.0.0",
+          "Microsoft.Azure.WebJobs.Host.Storage": "3.0.0",
           "ncrontab.signed": "3.3.0"
         },
         "compile": {
@@ -350,10 +350,10 @@
           "lib/netstandard2.0/Microsoft.Azure.WebJobs.Extensions.Http.dll": {}
         }
       },
-      "Microsoft.Azure.WebJobs.Host.Storage/3.0.13": {
+      "Microsoft.Azure.WebJobs.Host.Storage/3.0.0": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Azure.WebJobs": "3.0.13",
+          "Microsoft.Azure.WebJobs": "3.0.0",
           "WindowsAzure.Storage": "9.3.1"
         },
         "compile": {
@@ -363,7 +363,7 @@
           "lib/netstandard2.0/Microsoft.Azure.WebJobs.Host.Storage.dll": {}
         }
       },
-      "Microsoft.Azure.WebJobs.Script.ExtensionsMetadataGenerator/1.1.2": {
+      "Microsoft.Azure.WebJobs.Script.ExtensionsMetadataGenerator/1.0.1": {
         "type": "package",
         "dependencies": {
           "Microsoft.Build.Framework": "15.3.409",
@@ -746,18 +746,18 @@
           "lib/netstandard2.0/Microsoft.Net.Http.Headers.dll": {}
         }
       },
-      "Microsoft.NET.Sdk.Functions/1.0.31": {
+      "Microsoft.NET.Sdk.Functions/1.0.24": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Azure.WebJobs": "[3.0.14, 3.1.0)",
-          "Microsoft.Azure.WebJobs.Extensions": "[3.0.5, 3.1.0)",
+          "Microsoft.Azure.WebJobs": "[3.0.0, 3.1.0)",
+          "Microsoft.Azure.WebJobs.Extensions": "[3.0.0, 3.1.0)",
           "Microsoft.Azure.WebJobs.Extensions.Http": "[3.0.0, 3.1.0)",
-          "Microsoft.Azure.WebJobs.Script.ExtensionsMetadataGenerator": "1.1.2",
-          "Newtonsoft.Json": "11.0.2"
+          "Microsoft.Azure.WebJobs.Script.ExtensionsMetadataGenerator": "1.0.1",
+          "Newtonsoft.Json": "[11.0.2]"
         },
         "build": {
-          "build/Microsoft.NET.Sdk.Functions.props": {},
-          "build/Microsoft.NET.Sdk.Functions.targets": {}
+          "build/netstandard1.0/Microsoft.NET.Sdk.Functions.props": {},
+          "build/netstandard1.0/Microsoft.NET.Sdk.Functions.targets": {}
         }
       },
       "Microsoft.NETCore.App/2.1.0": {
@@ -988,6 +988,15 @@
           }
         }
       },
+      "morelinq/3.1.1": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/MoreLinq.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/MoreLinq.dll": {}
+        }
+      },
       "ncrontab.signed/3.3.0": {
         "type": "package",
         "dependencies": {
@@ -1053,6 +1062,82 @@
         },
         "runtime": {
           "lib/netstandard1.0/_._": {}
+        }
+      },
+      "SixLabors.Core/1.0.0-beta0007": {
+        "type": "package",
+        "dependencies": {
+          "System.Runtime.CompilerServices.Unsafe": "4.5.1"
+        },
+        "compile": {
+          "lib/netcoreapp2.1/SixLabors.Core.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp2.1/SixLabors.Core.dll": {}
+        }
+      },
+      "SixLabors.Fonts/1.0.0-beta0008": {
+        "type": "package",
+        "dependencies": {
+          "SixLabors.Core": "1.0.0-beta0007"
+        },
+        "compile": {
+          "lib/netstandard2.0/SixLabors.Fonts.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/SixLabors.Fonts.dll": {}
+        }
+      },
+      "SixLabors.ImageSharp/1.0.0-beta0006": {
+        "type": "package",
+        "dependencies": {
+          "SixLabors.Core": "1.0.0-beta0007",
+          "System.Runtime.CompilerServices.Unsafe": "4.5.1"
+        },
+        "compile": {
+          "lib/netcoreapp2.1/SixLabors.ImageSharp.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp2.1/SixLabors.ImageSharp.dll": {}
+        }
+      },
+      "SixLabors.ImageSharp.Drawing/1.0.0-beta0006": {
+        "type": "package",
+        "dependencies": {
+          "SixLabors.Fonts": "1.0.0-beta0008",
+          "SixLabors.ImageSharp": "1.0.0-beta0006",
+          "SixLabors.Shapes": "1.0.0-beta0008"
+        },
+        "compile": {
+          "lib/netstandard2.0/SixLabors.ImageSharp.Drawing.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/SixLabors.ImageSharp.Drawing.dll": {}
+        }
+      },
+      "SixLabors.Shapes/1.0.0-beta0008": {
+        "type": "package",
+        "dependencies": {
+          "SixLabors.Core": "1.0.0-beta0007"
+        },
+        "compile": {
+          "lib/netstandard2.0/SixLabors.Shapes.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/SixLabors.Shapes.dll": {}
+        }
+      },
+      "SixLabors.Shapes.Text/1.0.0-beta0008": {
+        "type": "package",
+        "dependencies": {
+          "SixLabors.Fonts": "1.0.0-beta0008",
+          "SixLabors.Shapes": "1.0.0-beta0008"
+        },
+        "compile": {
+          "lib/netstandard2.0/SixLabors.Shapes.Text.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/SixLabors.Shapes.Text.dll": {}
         }
       },
       "System.AppContext/4.1.0": {
@@ -1575,7 +1660,7 @@
           "ref/netstandard1.5/System.Runtime.dll": {}
         }
       },
-      "System.Runtime.CompilerServices.Unsafe/4.5.0": {
+      "System.Runtime.CompilerServices.Unsafe/4.5.1": {
         "type": "package",
         "compile": {
           "ref/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll": {}
@@ -2201,39 +2286,39 @@
         "microsoft.aspnetcore.webutilities.nuspec"
       ]
     },
-    "Microsoft.Azure.WebJobs/3.0.14": {
-      "sha512": "0LV6fEI8xMUur/P2NaluWv6rmVkrErfEwBg38NclhRNLDW/wUgs05H10BolUZrnaFd77fGGFflW+gf82Fsq2OA==",
+    "Microsoft.Azure.WebJobs/3.0.0": {
+      "sha512": "HaRNJo9r1nI8payGJwMzi1BM6tQBv8YzDdYIdiDh79q1gFD++iapCN7HzUPkXMM4bMgZQkTErOIzKWg70GTe8g==",
       "type": "package",
-      "path": "microsoft.azure.webjobs/3.0.14",
+      "path": "microsoft.azure.webjobs/3.0.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "lib/netstandard2.0/Microsoft.Azure.WebJobs.Host.dll",
-        "microsoft.azure.webjobs.3.0.14.nupkg.sha512",
+        "microsoft.azure.webjobs.3.0.0.nupkg.sha512",
         "microsoft.azure.webjobs.nuspec"
       ]
     },
-    "Microsoft.Azure.WebJobs.Core/3.0.14": {
-      "sha512": "p4R88nkOZTJqRkVjbedSEe08VtShiehGUBH0RjRVYldIpDyqtZUxsF9lcMsoaBrFjZl9vELQ4KTmrDXey7Z9ig==",
+    "Microsoft.Azure.WebJobs.Core/3.0.0": {
+      "sha512": "ll2zlerQz/DvThwbVLzCKeSq7z4bJHIGImx4+ajtb0Uu0BPrKT4l2sh/KUZjp6SPAFtP8ISRFs+5gCDXMnySEw==",
       "type": "package",
-      "path": "microsoft.azure.webjobs.core/3.0.14",
+      "path": "microsoft.azure.webjobs.core/3.0.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "lib/netstandard2.0/Microsoft.Azure.WebJobs.dll",
-        "microsoft.azure.webjobs.core.3.0.14.nupkg.sha512",
+        "microsoft.azure.webjobs.core.3.0.0.nupkg.sha512",
         "microsoft.azure.webjobs.core.nuspec"
       ]
     },
-    "Microsoft.Azure.WebJobs.Extensions/3.0.5": {
-      "sha512": "ILy5nfOlSvb1bZ6IiK6C4bT1mvm0FkVIvSQtDZxjDrKeJ2N8VDf4YNEo2JUgGmFK7YdYBMx8vzwQawqnZB9CIw==",
+    "Microsoft.Azure.WebJobs.Extensions/3.0.0": {
+      "sha512": "ggweM+aMoyrnRXWd3QjhJbo2DTR6acd/0Or4JB+m0cyQbP/2JhXIXnVHVSrJ7VVwkfwmC4bk6J4w8W8s1HwoaA==",
       "type": "package",
-      "path": "microsoft.azure.webjobs.extensions/3.0.5",
+      "path": "microsoft.azure.webjobs.extensions/3.0.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "lib/netstandard2.0/Microsoft.Azure.WebJobs.Extensions.dll",
-        "microsoft.azure.webjobs.extensions.3.0.5.nupkg.sha512",
+        "microsoft.azure.webjobs.extensions.3.0.0.nupkg.sha512",
         "microsoft.azure.webjobs.extensions.nuspec"
       ]
     },
@@ -2249,29 +2334,29 @@
         "microsoft.azure.webjobs.extensions.http.nuspec"
       ]
     },
-    "Microsoft.Azure.WebJobs.Host.Storage/3.0.13": {
-      "sha512": "1mhUmOhD+LJlzukpYr+pk+mD3TA5CdLAIwoFulevT34avrn+3Bo/qZmNS48tCUck9nf+ewMOKB+FxwEzAkAf4A==",
+    "Microsoft.Azure.WebJobs.Host.Storage/3.0.0": {
+      "sha512": "k5FpRgdtD4u9NtCX9/PyksEM/SD2XfDzVvPdUQ/8cznMC6xz8FfC/n2Gpzg2uArGibAVjcfmTAqyHATzvgJuzQ==",
       "type": "package",
-      "path": "microsoft.azure.webjobs.host.storage/3.0.13",
+      "path": "microsoft.azure.webjobs.host.storage/3.0.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "lib/netstandard2.0/Microsoft.Azure.WebJobs.Host.Storage.dll",
-        "microsoft.azure.webjobs.host.storage.3.0.13.nupkg.sha512",
+        "microsoft.azure.webjobs.host.storage.3.0.0.nupkg.sha512",
         "microsoft.azure.webjobs.host.storage.nuspec"
       ]
     },
-    "Microsoft.Azure.WebJobs.Script.ExtensionsMetadataGenerator/1.1.2": {
-      "sha512": "hAf9/NF3SFpEOOpIU9958sam1ID4aa3VoKhvZ7HqlzqNrOCSEk13g7+p4SFo74ELwWp3a3hKpmQBKYXc8/Xqdw==",
+    "Microsoft.Azure.WebJobs.Script.ExtensionsMetadataGenerator/1.0.1": {
+      "sha512": "HBhZQlcbJa/f3IHi1gkirijegU/MfprxEjZeir8KJM33NrAZvl40j4Hs5ocJkcGKX1XxYaH/gk8njSN3818Qtg==",
       "type": "package",
-      "path": "microsoft.azure.webjobs.script.extensionsmetadatagenerator/1.1.2",
+      "path": "microsoft.azure.webjobs.script.extensionsmetadatagenerator/1.0.1",
       "hasTools": true,
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "build/Microsoft.Azure.WebJobs.Script.ExtensionsMetadataGenerator.props",
         "build/Microsoft.Azure.WebJobs.Script.ExtensionsMetadataGenerator.targets",
-        "microsoft.azure.webjobs.script.extensionsmetadatagenerator.1.1.2.nupkg.sha512",
+        "microsoft.azure.webjobs.script.extensionsmetadatagenerator.1.0.1.nupkg.sha512",
         "microsoft.azure.webjobs.script.extensionsmetadatagenerator.nuspec",
         "tools/net46/Microsoft.Azure.WebJobs.Script.ExtensionsMetadataGenerator.dll",
         "tools/netstandard2.0/Microsoft.Azure.WebJobs.Script.ExtensionsMetadataGenerator.dll",
@@ -2714,29 +2799,29 @@
         "microsoft.net.http.headers.nuspec"
       ]
     },
-    "Microsoft.NET.Sdk.Functions/1.0.31": {
-      "sha512": "4rIFL+cUXfZh23qCdySiLHuMy37Lsdo9yA1RTEC8aDKrjxFcA6xjRkcGQXMaNzgplM+lm2e63Cf7SjiOtDBOjQ==",
+    "Microsoft.NET.Sdk.Functions/1.0.24": {
+      "sha512": "iYNhz5v331rTIL7OBLAulCPpxNvTdw2u5QObK18YpWnjsHovrCWu8YQumXc1p9EqeOkw5hXqHgV97mUZOZ3wHA==",
       "type": "package",
-      "path": "microsoft.net.sdk.functions/1.0.31",
+      "path": "microsoft.net.sdk.functions/1.0.24",
       "hasTools": true,
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "build/ExtensionsMetadataGeneratorVersion.props",
-        "build/Microsoft.NET.Sdk.Functions.Build.props",
-        "build/Microsoft.NET.Sdk.Functions.Build.targets",
-        "build/Microsoft.NET.Sdk.Functions.Publish.ZipDeploy.targets",
-        "build/Microsoft.NET.Sdk.Functions.Publish.props",
-        "build/Microsoft.NET.Sdk.Functions.Publish.targets",
-        "build/Microsoft.NET.Sdk.Functions.Version.props",
-        "build/Microsoft.NET.Sdk.Functions.props",
-        "build/Microsoft.NET.Sdk.Functions.targets",
-        "microsoft.net.sdk.functions.1.0.31.nupkg.sha512",
+        "Sdk/Sdk.props",
+        "Sdk/Sdk.targets",
+        "build/netstandard1.0/ExtensionsMetadataGeneratorVersion.props",
+        "build/netstandard1.0/Microsoft.NET.Sdk.Functions.Build.props",
+        "build/netstandard1.0/Microsoft.NET.Sdk.Functions.Build.targets",
+        "build/netstandard1.0/Microsoft.NET.Sdk.Functions.Publish.ZipDeploy.targets",
+        "build/netstandard1.0/Microsoft.NET.Sdk.Functions.Publish.props",
+        "build/netstandard1.0/Microsoft.NET.Sdk.Functions.Publish.targets",
+        "build/netstandard1.0/Microsoft.NET.Sdk.Functions.props",
+        "build/netstandard1.0/Microsoft.NET.Sdk.Functions.targets",
+        "microsoft.net.sdk.functions.1.0.24.nupkg.sha512",
         "microsoft.net.sdk.functions.nuspec",
         "tools/net46/Microsoft.NET.Sdk.Functions.Generator.exe",
         "tools/net46/Microsoft.NET.Sdk.Functions.MSBuild.dll",
         "tools/net46/Microsoft.NET.Sdk.Functions.dll",
-        "tools/net46/Mono.Cecil.dll",
         "tools/net46/Newtonsoft.Json.dll",
         "tools/net46/System.Net.Http.dll",
         "tools/net46/System.ValueTuple.dll",
@@ -2745,7 +2830,6 @@
         "tools/netcoreapp2.1/Microsoft.NET.Sdk.Functions.Generator.runtimeconfig.json",
         "tools/netcoreapp2.1/Microsoft.NET.Sdk.Functions.MSBuild.dll",
         "tools/netcoreapp2.1/Microsoft.NET.Sdk.Functions.dll",
-        "tools/netcoreapp2.1/Mono.Cecil.dll",
         "tools/netcoreapp2.1/Newtonsoft.Json.dll"
       ]
     },
@@ -3158,6 +3242,26 @@
         "runtimes/win/lib/netstandard1.3/Microsoft.Win32.Registry.dll"
       ]
     },
+    "morelinq/3.1.1": {
+      "sha512": "BZzKFYIGKe84NUBkxKfug/dQEE5fpixYlZxkgqSH/yAvlZ7Fhpkdts9ui1ENaATsJvLz4qrtWLYlwLVP9Bc7jA==",
+      "type": "package",
+      "path": "morelinq/3.1.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net451/MoreLinq.dll",
+        "lib/net451/MoreLinq.pdb",
+        "lib/net451/MoreLinq.xml",
+        "lib/netstandard1.0/MoreLinq.dll",
+        "lib/netstandard1.0/MoreLinq.pdb",
+        "lib/netstandard1.0/MoreLinq.xml",
+        "lib/netstandard2.0/MoreLinq.dll",
+        "lib/netstandard2.0/MoreLinq.pdb",
+        "lib/netstandard2.0/MoreLinq.xml",
+        "morelinq.3.1.1.nupkg.sha512",
+        "morelinq.nuspec"
+      ]
+    },
     "ncrontab.signed/3.3.0": {
       "sha512": "w+fVX+uCk3C0nR7BDjWAmUzDQPNAaBusTPljWehx/2cbBTxuKm81sCTebwRnJtHfS+38xbqF7NiiwPWjRMKiFQ==",
       "type": "package",
@@ -3357,6 +3461,104 @@
         "lib/netstandard1.0/_._",
         "runtime.native.system.4.3.0.nupkg.sha512",
         "runtime.native.system.nuspec"
+      ]
+    },
+    "SixLabors.Core/1.0.0-beta0007": {
+      "sha512": "s9aPl6yxwcvoKRD0u0zjkCISZCCifbUi9/XVFjdvlx5Pt7vRYmGV0anq1EEftUjIEHbEu5aNBipbUSBIV2CE7w==",
+      "type": "package",
+      "path": "sixlabors.core/1.0.0-beta0007",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netcoreapp2.0/SixLabors.Core.dll",
+        "lib/netcoreapp2.0/SixLabors.Core.xml",
+        "lib/netcoreapp2.1/SixLabors.Core.dll",
+        "lib/netcoreapp2.1/SixLabors.Core.xml",
+        "lib/netstandard1.3/SixLabors.Core.dll",
+        "lib/netstandard1.3/SixLabors.Core.xml",
+        "lib/netstandard2.0/SixLabors.Core.dll",
+        "lib/netstandard2.0/SixLabors.Core.xml",
+        "sixlabors.core.1.0.0-beta0007.nupkg.sha512",
+        "sixlabors.core.nuspec"
+      ]
+    },
+    "SixLabors.Fonts/1.0.0-beta0008": {
+      "sha512": "rxOe1b0XdxD3CNNUFMmFf15YL6vwx/jjR45gV/tGNcO04M40QuGPvoIwRkJlKQXGruV42TcMqEPnAGqCvlFBVw==",
+      "type": "package",
+      "path": "sixlabors.fonts/1.0.0-beta0008",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netstandard1.3/SixLabors.Fonts.dll",
+        "lib/netstandard1.3/SixLabors.Fonts.xml",
+        "lib/netstandard2.0/SixLabors.Fonts.dll",
+        "lib/netstandard2.0/SixLabors.Fonts.xml",
+        "sixlabors.fonts.1.0.0-beta0008.nupkg.sha512",
+        "sixlabors.fonts.nuspec"
+      ]
+    },
+    "SixLabors.ImageSharp/1.0.0-beta0006": {
+      "sha512": "VHDX00uAzPWj5qFYE5xJZyr5Cx4Jtd3p2dfX7swSrzlQoPEZPXXwQ+O3Fc4hNWvaNvR1NAiXSb27Ts6yv3lMDw==",
+      "type": "package",
+      "path": "sixlabors.imagesharp/1.0.0-beta0006",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net472/SixLabors.ImageSharp.dll",
+        "lib/net472/SixLabors.ImageSharp.xml",
+        "lib/netcoreapp2.1/SixLabors.ImageSharp.dll",
+        "lib/netcoreapp2.1/SixLabors.ImageSharp.xml",
+        "lib/netstandard1.3/SixLabors.ImageSharp.dll",
+        "lib/netstandard1.3/SixLabors.ImageSharp.xml",
+        "lib/netstandard2.0/SixLabors.ImageSharp.dll",
+        "lib/netstandard2.0/SixLabors.ImageSharp.xml",
+        "sixlabors.imagesharp.1.0.0-beta0006.nupkg.sha512",
+        "sixlabors.imagesharp.nuspec"
+      ]
+    },
+    "SixLabors.ImageSharp.Drawing/1.0.0-beta0006": {
+      "sha512": "gVSughdCm0dndDYoMmiTfNP2ins7s4GqQecvr0tIpgAFFw0Q/hy8+XbVEuauQIe8T2TEXoNnqHEBFk8xuqseOg==",
+      "type": "package",
+      "path": "sixlabors.imagesharp.drawing/1.0.0-beta0006",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netstandard1.3/SixLabors.ImageSharp.Drawing.dll",
+        "lib/netstandard1.3/SixLabors.ImageSharp.Drawing.xml",
+        "lib/netstandard2.0/SixLabors.ImageSharp.Drawing.dll",
+        "lib/netstandard2.0/SixLabors.ImageSharp.Drawing.xml",
+        "sixlabors.imagesharp.drawing.1.0.0-beta0006.nupkg.sha512",
+        "sixlabors.imagesharp.drawing.nuspec"
+      ]
+    },
+    "SixLabors.Shapes/1.0.0-beta0008": {
+      "sha512": "qGouMMBI2EIMvXXWMBxAWRGg1iI8Z1AYvgww+P5pXVJoixCO1IEwil6SlYZ7XR+eppCjQzfenVtXHH3BDT/Eww==",
+      "type": "package",
+      "path": "sixlabors.shapes/1.0.0-beta0008",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netstandard1.3/SixLabors.Shapes.dll",
+        "lib/netstandard1.3/SixLabors.Shapes.xml",
+        "lib/netstandard2.0/SixLabors.Shapes.dll",
+        "lib/netstandard2.0/SixLabors.Shapes.xml",
+        "sixlabors.shapes.1.0.0-beta0008.nupkg.sha512",
+        "sixlabors.shapes.nuspec"
+      ]
+    },
+    "SixLabors.Shapes.Text/1.0.0-beta0008": {
+      "sha512": "enGd7xxR4+xWt1tLqdrV+8fWH1cWHsgFU5ROZFL2v3ScBSFf5Mpm633tiupDR0n/p102deCs6qe0BoHTmTZmSA==",
+      "type": "package",
+      "path": "sixlabors.shapes.text/1.0.0-beta0008",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netstandard1.3/SixLabors.Shapes.Text.dll",
+        "lib/netstandard1.3/SixLabors.Shapes.Text.xml",
+        "lib/netstandard2.0/SixLabors.Shapes.Text.dll",
+        "lib/netstandard2.0/SixLabors.Shapes.Text.xml",
+        "sixlabors.shapes.text.1.0.0-beta0008.nupkg.sha512",
+        "sixlabors.shapes.text.nuspec"
       ]
     },
     "System.AppContext/4.1.0": {
@@ -5166,10 +5368,10 @@
         "system.runtime.nuspec"
       ]
     },
-    "System.Runtime.CompilerServices.Unsafe/4.5.0": {
-      "sha512": "YrzNWduCDHhUaSRBxHxL11UkM2fD6y8hITHis4/LbQZ6vj3vdRjoH3IoPWWC9uDXK2wHIqn+b5gv1Np/VKyM1g==",
+    "System.Runtime.CompilerServices.Unsafe/4.5.1": {
+      "sha512": "Zh8t8oqolRaFa9vmOZfdQm/qKejdqz0J9kr7o2Fu0vPeoH3BL1EOXipKWwkWtLT1JPzjByrF19fGuFlNbmPpiw==",
       "type": "package",
-      "path": "system.runtime.compilerservices.unsafe/4.5.0",
+      "path": "system.runtime.compilerservices.unsafe/4.5.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -5181,13 +5383,11 @@
         "lib/netstandard1.0/System.Runtime.CompilerServices.Unsafe.xml",
         "lib/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll",
         "lib/netstandard2.0/System.Runtime.CompilerServices.Unsafe.xml",
-        "lib/uap10.0.16300/_._",
         "ref/netstandard1.0/System.Runtime.CompilerServices.Unsafe.dll",
         "ref/netstandard1.0/System.Runtime.CompilerServices.Unsafe.xml",
         "ref/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll",
         "ref/netstandard2.0/System.Runtime.CompilerServices.Unsafe.xml",
-        "ref/uap10.0.16300/_._",
-        "system.runtime.compilerservices.unsafe.4.5.0.nupkg.sha512",
+        "system.runtime.compilerservices.unsafe.4.5.1.nupkg.sha512",
         "system.runtime.compilerservices.unsafe.nuspec",
         "useSharedDesignerContext.txt",
         "version.txt"
@@ -6411,8 +6611,11 @@
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.1": [
-      "Microsoft.NET.Sdk.Functions >= 1.0.31",
-      "Microsoft.NETCore.App >= 2.1.0"
+      "Microsoft.NET.Sdk.Functions >= 1.0.24",
+      "Microsoft.NETCore.App >= 2.1.0",
+      "MoreLinq >= 3.1.1",
+      "SixLabors.ImageSharp.Drawing >= 1.0.0-beta0006",
+      "SixLabors.Shapes.Text >= 1.0.0-beta0008"
     ]
   },
   "packageFolders": {
@@ -6422,11 +6625,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "c:\\side\\bot\\hackathon\\hackathon.csproj",
+      "projectUniqueName": "c:\\side\\bot\\spaceracebot\\spaceracebot\\hackathon.csproj",
       "projectName": "hackathon",
-      "projectPath": "c:\\side\\bot\\hackathon\\hackathon.csproj",
+      "projectPath": "c:\\side\\bot\\spaceracebot\\spaceracebot\\hackathon.csproj",
       "packagesPath": "C:\\Users\\ASUS\\.nuget\\packages\\",
-      "outputPath": "c:\\side\\bot\\hackathon\\obj\\",
+      "outputPath": "c:\\side\\bot\\spaceracebot\\spaceracebot\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -6456,13 +6659,25 @@
         "dependencies": {
           "Microsoft.NET.Sdk.Functions": {
             "target": "Package",
-            "version": "[1.0.31, )"
+            "version": "[1.0.24, )"
           },
           "Microsoft.NETCore.App": {
             "suppressParent": "All",
             "target": "Package",
             "version": "[2.1.0, )",
             "autoReferenced": true
+          },
+          "MoreLinq": {
+            "target": "Package",
+            "version": "[3.1.1, )"
+          },
+          "SixLabors.ImageSharp.Drawing": {
+            "target": "Package",
+            "version": "[1.0.0-beta0006, )"
+          },
+          "SixLabors.Shapes.Text": {
+            "target": "Package",
+            "version": "[1.0.0-beta0008, )"
           }
         },
         "imports": [
@@ -6472,17 +6687,5 @@
         "warn": true
       }
     }
-  },
-  "logs": [
-    {
-      "code": "NU1603",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Microsoft.Azure.WebJobs.Extensions 3.0.5 depends on Microsoft.Azure.WebJobs.Host.Storage (>= 3.0.11) but Microsoft.Azure.WebJobs.Host.Storage 3.0.11 was not found. An approximate best match of Microsoft.Azure.WebJobs.Host.Storage 3.0.13 was resolved.",
-      "libraryId": "Microsoft.Azure.WebJobs.Host.Storage",
-      "targetGraphs": [
-        ".NETCoreApp,Version=v2.1"
-      ]
-    }
-  ]
+  }
 }
