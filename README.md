@@ -13,7 +13,7 @@ Comment on the newest facebook post to have the bot roll your dice.
 
 ### Build
 
-Rename `mv local.settings.example.json local.settings.json` and open the `local.settings.json` env file.
+Rename `local.settings.example.json` to `local.settings.json` and open the `local.settings.json` env file.
 Change the `SpaceRaceBotPage` and `SpaceRaceBotToken` values according to your bot page ID and token. Then:
 
 ```
